@@ -2,7 +2,7 @@
 
 
 
-describe('Check sidebar',() => {
+describe('Check Sidebar',() => {
   beforeEach(() => {
       cy.visit('../index.html')
   })
@@ -24,21 +24,33 @@ describe('Check sidebar',() => {
     cy.get('.mt-2').should('exist')
   })
   it('should have dashboard', () => {
-    cy.get('.active').should('contain', 'Dashboard')
-    cy.get('.active').should('contain', 'Search')
+    cy.get('.nav-pills > :nth-child(1) > .nav-link').should('contain', 'Dashboard')
+    cy.get(':nth-child(10) > .nav-link').should('contain', 'Search')
   })
   it('should have configuration', () => {
-    cy.get('.nav-item').should('contain', 'Configuration')
-    cy.get('.nav-item').should('contain', 'DataBase')
-    cy.get('.nav-item').should('contain', 'Mailbox')
-    cy.get('.nav-item').should('contain', 'Pages')
-    cy.get('.nav-item').should('contain', 'Extras')
+    cy.get('.nav-pills > :nth-child(3) > .nav-link').should('contain', 'Configuration')
+    cy.get('.nav-pills > :nth-child(4) > .nav-link').should('contain', 'DataBase')
+    cy.get('.nav-pills > :nth-child(7) > .nav-link').should('contain', 'Mailbox')
+    cy.get(':nth-child(8) > [href="#"]').should('contain', 'Pages')
+    cy.get(':nth-child(9) > [href="#"]').should('contain', 'Extras')
   })
 
 })
+describe('Check Header', () => {
+  it('should have content', () => {
+    cy.get('.main-header').should('exist')
+    cy.get('.main-header > :nth-child(1) > :nth-child(1) > .nav-link').should('exist')
+    cy.get('.main-header > :nth-child(1) > :nth-child(2) > .nav-link').should('exist')
+    cy.get('.main-header > :nth-child(1) > :nth-child(2) > .nav-link').should('contain', 'Home')
+    cy.get('.main-header > :nth-child(1) > :nth-child(3) > .nav-link').should('exist')
+    cy.get('.main-header > :nth-child(1) > :nth-child(3) > .nav-link').should('contain', 'Contact')
+    cy.get('.ml-auto > .nav-item > .nav-link').should('exist')
 
-describe('Check main content', () => {
+})
+})
+
+describe('Check Main Content', () => {
   it('should have copyright', () => {
-    cy.get('footer').should('contain', 'Copyright')
+    cy.get('.main-footer').should('contain', 'Copyright')
 })
 })
