@@ -25,9 +25,14 @@ describe('Check sidebar',() => {
   })
   it('should have dashboard', () => {
     cy.get('.active').should('contain', 'Dashboard')
+    cy.get('.active').should('contain', 'Search')
   })
   it('should have configuration', () => {
-    cy.get('.active').should('contain', 'Configuration')
+    cy.get('.nav-item').should('contain', 'Configuration')
+    cy.get('.nav-item').should('contain', 'DataBase')
+    cy.get('.nav-item').should('contain', 'Mailbox')
+    cy.get('.nav-item').should('contain', 'Pages')
+    cy.get('.nav-item').should('contain', 'Extras')
   })
 
 })
