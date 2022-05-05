@@ -7,7 +7,7 @@ describe('Check Sidebar',() => {
       cy.visit('../index.html')
   })
   it('should have copyright', () => {
-      cy.get('footer').should('contain', 'Copyright')
+    cy.get('footer').should('contain', 'Copyright')
   })
   it('should have logo and company name', () => {
     cy.get('.elevation-3').invoke('attr', 'src').should('include', 'AnthillLogo')
