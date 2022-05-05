@@ -27953,10 +27953,10 @@ html.maximized-card {
   border: 1px solid #ddd;
   color: #6c757d;
   font-size: 12px;
-  height: 60px;
+  height: 50px;
   margin: 0 0 10px 10px;
-  min-width: 80px;
-  padding: 15px 5px;
+  min-width: 55px;
+  padding: 6px 15px;
   position: relative;
   text-align: center;
 }
@@ -44891,6 +44891,20 @@ a.text-muted:hover {
   background-color: #fff;
   border-color: #dee2e6;
   color: #6c757d;
+}
+
+.btn-app-max {
+  border-radius: 3px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #6c757d;
+  font-size: 12px;
+  height: 50px;
+  margin: 0 0 10px 10px;
+  min-width: 55px;
+  padding: 6px 15px;
+  position: relative;
+  text-align: center;
 }
 
 .accent-pink [class*="sidebar-dark-"] .sidebar a:not(.dropdown-item):not(.btn-app):not(.nav-link):not(.brand-link) {

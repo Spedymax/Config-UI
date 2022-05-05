@@ -42,7 +42,7 @@
         <a href="../../index.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="../../pages/contact/contact-us.html" class="nav-link">Contact</a>
       </li>
     </ul>
 
@@ -201,31 +201,6 @@
           <li class="nav-header">Additional pages</li>
           <li class="nav-item">
           <li class="nav-item">
-            <a href="../../pages/mailbox/mailbox.html" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
-                Mailbox
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Pages
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../../pages/examples/faq.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>FAQ</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
@@ -277,14 +252,6 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="../../pages/search/simple.html" class="nav-link active">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Search
-              </p>
-            </a>
-          </li>
           
         </ul>
       </nav>
@@ -318,37 +285,35 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Config</h3>
+            <h3 class="card-title">Veeva Tokens</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
             <div class="row">
               <!-- /.col -->
               <div class="col-md-6">
-                <form action="">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Account Title</label>
-                    <input type="txt" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                <p>
+                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Add
+                  </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">Label</label>
+                          <input type="text" class="form-control" placeholder="Label">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label for="exampleFormControlSelect1"> Value</label>
+                        <input type="text" class="form-control" placeholder="Value">
+                      </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="#">Save</button>
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputtxt1">Account First Name</label>
-                    <input type="txt" class="form-control" id="exampleInputtxt1" placeholder="Enter text">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Account Second Name</label>
-                    <input type="txt" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputtxt1">Approved Email</label>
-                    <input type="txt" class="form-control" id="exampleInputtxt1" placeholder=" Enter text">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email Template Fragment</label>
-                    <input type="txt" class="form-control" id="exampleInputEmail" placeholder="Enter email">
-                  </div>
-                
-                  <button class="btn btn-primary" onclick="#">Save</button>
-                </form>
+                </div>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
@@ -364,72 +329,8 @@
         <!-- /.card -->
 
         
-        <!-- /.row -->
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card card-default">
-              <div class="card-header">
-                <h3 class="card-title">Config</h3>
-              </div>
-              <div class="card-body p-0">
-                <div class="bs-stepper">
-                  <div class="bs-stepper-header" role="tablist">
-                    <!-- your steps here -->
-                    <div class="step" data-target="#logins-part">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
-                        <span class="bs-stepper-circle">1</span>
-                        <span class="bs-stepper-label">Logins</span>
-                      </button>
-                    </div>
-                    <div class="line"></div>
-                    <div class="step" data-target="#information-part">
-                      <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
-                        <span class="bs-stepper-circle">2</span>
-                        <span class="bs-stepper-label">Various information</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="bs-stepper-content">
-                    <!-- your steps content here -->
-                    <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Account First Name</label>
-                        <input type="txt" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Account Second name</label>
-                        <input type="txt" class="form-control" id="exampleInputPassword1" placeholder="">
-                      </div>
-                      <button class="btn btn-primary" onclick="stepper.next()">Next</button>
-                    </div>
-                    <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
-                      <div class="form-group">
-                        <label for="exampleInputFile">File input</label>
-                        <div class="input-group">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="exampleInputFile">
-                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                          </div>
-                          <div class="input-group-append">
-                            <span class="input-group-text">Upload</span>
-                          </div>
-                        </div>
-                      </div>
-                      <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer">
-                Visit <a href="https://github.com/Johann-S/bs-stepper/#how-to-use-it">bs-stepper documentation</a> for more examples and information about the plugin.
-              </div>
-            </div>
-            <!-- /.card -->
-          </div>
-        </div>
-        <!-- /.row -->
+        
+        
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
@@ -480,7 +381,10 @@
 <script>
   $(function () {
     //Initialize Select2 Elements
-    $('.select2').select2()
+    $('.select2').select2({
+      placeholder: "Value",
+      allowClear: true
+    })
 
     //Initialize Select2 Elements
     $('.select2bs4').select2({
