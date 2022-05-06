@@ -285,48 +285,98 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Veeva Tokens</h3>
+            <h3 class="card-title">Vault field definitions</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
             <div class="row">
               <!-- /.col -->
               <div class="col-md-6">
-                <p>
-                  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Add
-                  </button>
-                </p>
-                <div class="collapse" id="collapseExample">
-                  <div class="card card-body">
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-group">
-                          <label for="exampleFormControlSelect1">Label</label>
-                          <input type="text" class="form-control" placeholder="Label">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <label for="exampleFormControlSelect1"> Value</label>
-                        <input type="text" class="form-control" placeholder="Value">
-                      </div>
-                    </div>
-                    <button class="btn btn-primary" onclick="#">Save</button>
+                <label style = "font-size: 32px;">Renditions</label>
+                <form>
+                  <div class="form-group">
+                    <label for="default_rendition_value">DEFAULT_RENDITION </label>
+                    <input type="txt" class="form-control" id="default_rendition_value" aria-describedby="emailHelp" placeholder="Value">
                   </div>
-                </div>
+                  <div class="form-group">
+                    <label for="distribution_pkg_rendition_value">DISTRIBUTION_PKG_RENDITION</label>
+                    <input type="txt" class="form-control" id="distribution_pkg_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="viewable_rendition_value">VIEWABLE_RENDITION</label>
+                    <input type="txt" class="form-control" id="viewable_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="assets_rendition_value">ASSETS_RENDITION</label>
+                    <input type="txt" class="form-control" id="assets_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="add_dist_pkg_rendition_manually_value">ADD_DIST_PKG_RENDITION_MANUALLY</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="add_viewable_rendition_manually_value">ADD_VIEWABLE_RENDITION_MANUALLY</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+                <!-- /.form-group -->
+              </div>
+              <div class="col-md-6">
+                <label style = "font-size: 32px;">Documents</label>
+                <form>
+                  <div class="form-group">
+                    <label for="vault_login_url_value">VAULT_LOGIN_URL</label>
+                    <input type="txt" class="form-control" id="vault_login_url_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="vault_version_value">VAULT_VERSION</label>
+                    <input type="txt" class="form-control" id="vault_version_value" placeholder="Value">
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+            </div>
+            
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        <div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title">Vault configuration </h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <!-- /.col -->
+              <div class="col-md-6">
+                <form>
+                  <div class="form-group">
+                    <label for="vault_login_url_value">VAULT_LOGIN_URL</label>
+                    <input type="txt" class="form-control" id="vault_login_url_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="vault_version_value">VAULT_VERSION</label>
+                    <input type="txt" class="form-control" id="vault_version_value" placeholder="Value">
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
             </div>
             <!-- /.row -->
           </div>
-          <!-- /.card-body -->
-          <div class="card-footer">
-            Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
-            the plugin.
-          </div>
-        </div>
-        <!-- /.card -->
 
         
         
