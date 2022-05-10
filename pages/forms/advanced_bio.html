@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthill Agency | Advanced form elements</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+  <!-- BS Stepper -->
+  <link rel="stylesheet" href="../../plugins/bs-stepper/css/bs-stepper.min.css">
+  <!-- dropzonejs -->
+  <link rel="stylesheet" href="../../plugins/dropzone/min/dropzone.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../../index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../../pages/contact/contact-us.html" class="nav-link">Contact</a>
+      </li>
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Environment
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Sandbox</a>
+          <a class="dropdown-item" href="#">Active</a>
+          <a class="dropdown-item" href="#">Test</a>
+        </div>
+      </div>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.html" class="brand-link">
+      <img src="../../dist/img/AnthillLogo.png" alt="Anthill Agency Logo" class="brand-image img-square elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Anthill Agency</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-square elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Admin name</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link active">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tree"></i>
+              <p>
+                UI Elements
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="../../pages/UI/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>General</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../pages/UI/icons.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Icons</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../pages/UI/buttons.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Buttons</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../pages/UI/sliders.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sliders</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../pages/UI/modals.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Modals & Alerts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../pages/UI/navbar.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Navbar & Tabs</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../pages/UI/timeline.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Timeline</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../../pages/UI/ribbons.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ribbons</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="../../pages/forms/advanced_bio.html" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Configuration
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../../pages/tables/data.html" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                DataBase
+              </p>
+            </a>
+          </li>
+          <li class="nav-header">Additional pages</li>
+          <li class="nav-item">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-plus-square"></i>
+              <p>
+                Extras
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Login & Register v1
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../../pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Login v1</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Register v1</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Forgot Password v1</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../pages/examples/recover-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Recover Password v1</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="../../pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lockscreen</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Biogen</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Biogen</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title">Vault field definitions</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <!-- /.col -->
+              <div class="col-md-6">
+                <label style = "font-size: 32px;">Renditions</label>
+                <form>
+                  <div class="form-group">
+                    <label for="default_rendition_value">DEFAULT_RENDITION </label>
+                    <input type="txt" class="form-control" id="default_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="distribution_pkg_rendition_value">DISTRIBUTION_PKG_RENDITION</label>
+                    <input type="txt" class="form-control" id="distribution_pkg_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="viewable_rendition_value">VIEWABLE_RENDITION</label>
+                    <input type="txt" class="form-control" id="viewable_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="assets_rendition_value">ASSETS_RENDITION</label>
+                    <input type="txt" class="form-control" id="assets_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="add_dist_pkg_rendition_manually_value">ADD_DIST_PKG_RENDITION_MANUALLY</label>
+                    <select class="form-control" id="add_dist_pkg_rendition_manually_value">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="add_viewable_rendition_manually_value">ADD_VIEWABLE_RENDITION_MANUALLY</label>
+                    <select class="form-control" id="add_viewable_rendition_manually_value">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+                <hr/>
+                <label style = "font-size: 32px;">Components</label>
+                <form>
+                  <div class="form-group">
+                    <label for="component_rel_value">COMPONENT_REL </label>
+                    <input type="txt" class="form-control" id="component_rel_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="email_component_rel_value">EMAIL_COMPONENT_REL</label>
+                    <input type="txt" class="form-control" id="email_component_rel_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="default_asset_types_value">DEFAULT_ASSET_TYPES</label>
+                    <input type="txt" class="form-control" id="default_asset_types_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="allow_asset_upload_value">ALLOW_ASSET_UPLOAD</label>
+                    <select class="form-control" id="allow_asset_upload_value">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>                 
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+                <hr/>
+                <label style = "font-size: 32px;">Relationships</label>
+                <form>
+                  <div class="form-group">
+                    <label for="based_on_rel_value">BASED_ON_REL</label>
+                    <input type="txt" class="form-control" id="based_on_rel_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="original_source_rel_value">ORIGINAL_SOURCE_REL</label>
+                    <input type="txt" class="form-control" id="original_source_rel_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="shared_rel_value">SHARED_REL</label>
+                    <input type="txt" class="form-control" id="shared_rel_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="binder_shared_rel_value">BINDER_SHARED_REL</label>
+                    <input type="txt" class="form-control" id="binder_shared_rel_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="shared_flag_value">SHARED_FLAG</label>
+                    <input type="txt" class="form-control" id="shared_flag_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="versioned_relationships_value">VERSIONED_RELATIONSHIPS</label>
+                    <select class="form-control" id="versioned_relationships_value">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+                <!-- /.form-group -->
+                <form>
+                <hr/>
+                <label style = "font-size: 32px;">Modular Content</label>
+                  <div class="form-group">
+                    <label for="content_module_vault_query_value">CONTENT_MODULE_VAULT_QUERY</label>
+                    <input type="txt" class="form-control" id="content_module_vault_query_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="is_content_modules_hidden_value">IS_CONTENT_MODULES_HIDDEN</label>
+                    <select class="form-control" id="is_content_modules_hidden_value">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+                <!-- /.form-group -->
+                  
+                    <form>
+                      <hr/>
+                      <label style = "font-size: 32px;">Workflows</label>
+                        <div class="form-group">
+                          <label for="approved_states_value">APPROVED_STATES</label>
+                          <input type="txt" class="form-control" id="approved_states_value" aria-describedby="emailHelp" placeholder="Value">
+                        </div>
+                        <button class="btn btn-primary" onclick="#">Save</button>
+                    </form>
+                  
+                      
+                    <hr/>  
+                    
+                  <form>
+                    <label style = "font-size: 32px;">Emails</label>
+                      <div class="form-group">
+                        <label for="client_email_tokens_value">CLIENT_EMAIL_TOKENS</label>
+                        <h5>Group</h5>
+                        <p for="client_email_tokens_value">title</p>
+                        <input type="txt" class="form-control" id="client_email_tokens_value" placeholder="Value">
+                      </div> 
+                      <div class="form-group">  
+                        <p>
+                          
+                          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            Add
+                          </button>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                          <div class="card card-body">
+                            <div class="form-group">
+                              <label for="label_value">Label</label>
+                              <input type="txt" class="form-control" id="label_value" aria-describedby="emailHelp" placeholder="Value">
+                            </div>
+                            <div class="form-group">
+                              <label for="value">Value</label>
+                              <select class="form-control" id="value">
+                                <option>True</option>
+                                <option>False</option>
+                              </select>
+                            </div>
+                            <button class="btn btn-primary" onclick="#">Save</button>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn btn-primary" onclick="#">Save</button>
+                    </form>
+                    
+              </div>
+              <div class="col-md-6">
+                <label style = "font-size: 32px;">Documents</label>
+                <form>
+                  <div class="form-group">
+                    <label for="default_document_type_value">DEFAULT_DOCUMENT_TYPE</label>
+                    <input type="txt" class="form-control" id="default_document_type_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="versioned_relationship_value">VERSIONED_RELATIONSHIPS</label>
+                    <select class="form-control" id="versioned_relationship_value">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="brief_document_value">BRIEF_DOCUMENT_TYPE</label>
+                    <input type="txt" class="form-control" id="brief_document_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="is_use_activator_type_for_brief_value">IS_USE_ACTIVATOR_TYPE_FOR_BRIEF</label>
+                    <input type="txt" class="form-control" id="is_use_activator_type_for_brief_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="defaul_presentation_type_value">DEFAULT_PRESENTATION_TYPE</label>
+                    <input type="txt" class="form-control" id="defaul_presentation_type_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="default_email_template_type_value">DEFAULT_EMAIL_TEMPLATE_TYPE</label>
+                    <input type="txt" class="form-control" id="default_email_template_type_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="default_email_fragment_type_value">DEFAULT_EMAIL_FRAGMENT_TYPE</label>
+                    <input type="txt" class="form-control" id="default_email_fragment_type_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="document_vault_types_value">DOCUMENT_VAULT_TYPES</label>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">slide</p>
+                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                    </div>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">brief</p>
+                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                    </div>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">shared</p>
+                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                    </div>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">binder</p>
+                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                    </div>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">email</p>
+                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                    </div>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">image</p>
+                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="vault_type_map_value">VAULT_TYPE_MAP</label>
+                    <p for="vault_type_map_value">slide</p>
+                    <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                    <p for="vault_type_map_value">brief</p>
+                      <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="client_vault_fields_value">CLIENT_VAULT_FIELDS</label>
+                    <p for="client_vault_fields_value">activatorType</p>
+                    <input type="txt" class="form-control" id="client_vault_fields_value" placeholder="Value">
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+                <!-- /.form-group -->
+                <hr/>
+                <label style = "font-size: 32px;">Activator</label>
+                <form>
+                  <div class="form-group">
+                    <label for="delete_button_config_value">DELETE_BUTTON_CONFIG</label>
+                    <div class="form-group">
+                      <p for="client_vault_fields_value">hide </p>
+                      <select class="form-control" id="delete_button_config_value">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <p for="client_vault_fields_value">disabled </p>
+                      <select class="form-control" id="delete_button_config_value">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="show_dashboard_items_vault">SHOW_DASHBOARD_ITEMS</label>
+                    <select class="form-control" id="show_dashboard_items_vault">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="dashboard_type_records_value">DASHBOARD_TYPE_RECORDS</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" checked>
+                      <label class="form-check-label" for="flexCheckDefault1">
+                        slides
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked>
+                      <label class="form-check-label" for="flexCheckDefault2">
+                        binders
+                      </label>
+                    </div>
+                    <div class="form-check"> 
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" checked>
+                      <label class="form-check-label" for="flexCheckDefault3">
+                        briefs
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" checked>
+                      <label class="form-check-label" for="flexCheckDefault4">
+                        emails
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="entity_types_allowed_to_publish_value">ENTITY_TYPES_ALLOWED_TO_PUBLISH</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" checked>
+                      <label class="form-check-label" for="flexCheckDefault5">
+                        slide
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" checked>
+                      <label class="form-check-label" for="flexCheckDefault6">
+                        binder
+                      </label>
+                    </div>
+                    <div class="form-check"> 
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7" checked>
+                      <label class="form-check-label" for="flexCheckDefault7">
+                        brief
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8" checked>
+                      <label class="form-check-label" for="flexCheckDefault8">
+                        email
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9" checked>
+                      <label class="form-check-label" for="flexCheckDefault9">
+                        shared
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="omit_in_binder_type_records_value">OMIT_IN_BINDER_TYPE_RECORDS</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10" >
+                      <label class="form-check-label" for="flexCheckDefault10">
+                        slides
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11" >
+                      <label class="form-check-label" for="flexCheckDefault11">
+                        binders
+                      </label>
+                    </div>
+                    <div class="form-check"> 
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12" >
+                      <label class="form-check-label" for="flexCheckDefault12">
+                        briefs
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13" checked>
+                      <label class="form-check-label" for="flexCheckDefault13">
+                        emails
+                      </label>
+                    </div>
+                  <div class="form-group">
+                    <label for="show_only_activator_content_value">SHOW_ONLY_ACTIVATOR_CONTENT </label>
+                    <select class="form-control" id="show_only_activator_content_value">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="allow_oce_export_value">ALLOW_OCE_EXPORT</label>
+                    <select class="form-control" id="allow_oce_export_value">
+                      <option>True</option>
+                      <option>False</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="filtered_sidenav_items_value">FILTERED_SIDENAV_ITEMS</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13" >
+                      <label class="form-check-label" for="flexCheckDefault13">
+                        createSlide                        
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14" >
+                      <label class="form-check-label" for="flexCheckDefault14">
+                        createEmail
+                      </label>
+                    </div>
+                    <div class="form-check"> 
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15" >
+                      <label class="form-check-label" for="flexCheckDefault15">
+                        createBinder
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault16">
+                      <label class="form-check-label" for="flexCheckDefault16">
+                        duplicateDoc
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="vault_type_map_value">CLIENT_DUPLICATE_BUTTON_HIDDEN</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                      <label class="form-check-label" for="flexCheckDefault">
+                        slides
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                      <label class="form-check-label" for="flexCheckDefault">
+                        binders
+                      </label>
+                    </div>
+                    <div class="form-check"> 
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                      <label class="form-check-label" for="flexCheckDefault">
+                        briefs
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                      <label class="form-check-label" for="flexCheckDefault">
+                        emails
+                      </label>
+                    </div>
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="client_vault_fields_value">CONVERT_TO_FRAGMENT_BUTTON</label>
+                    <div class="form-group">
+                      <p for="client_vault_fields_value">hide </p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <p for="client_vault_fields_value">disabled </p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="client_vault_fields_value">ACTIVATOR_METADATA_FIELDS</label>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">isInUse </p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">activatorVersion </p>
+                      <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">createdInActivator </p>
+                      <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">lastModifiedInActivator </p>
+                      <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                    </div>  
+                  </div>
+                  <div class="form-group">
+                    <p for="client_vault_fields_value">lastModifiedInActivatorBy </p>
+                    <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="client_vault_fields_value">MEDIA_LIBRARY_POPUP_FILTERS_VISIBILITY</label>
+                    <div class="form-group">
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                  </div>
+                  <div class="form-group">
+                    
+                    <label for="client_vault_fields_value">MEDIA_LIBRARY_POPUP_FILTERS_VISIBILITY</label>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">productFilter</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">countryFilter</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">languageFilter</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">typeFilter</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">dateFilter</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                   
+                  </div>
+                  <div class="form-group">
+                    <label for="client_vault_fields_value">MEDIA_ASSET_GROUP_VISIBILITY</label>
+                    <div class="form-group">
+                      <p for="document_vault_types_value">local</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">shared</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">vault</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                    <div class="form-group">
+                      <p for="document_vault_types_value">web</p>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>True</option>
+                        <option>False</option>
+                      </select>
+                    </div>  
+                   
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+    </section>  
+    <section class="content">
+      <div class="container-fluid">  
+        <div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title">Vault configuration </h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <!-- /.col -->
+              <div class="col-md-6">
+                <form>
+                  <div class="form-group">
+                    <label for="vault_login_url_value">VAULT_LOGIN_URL</label>
+                    <input type="txt" class="form-control" id="vault_login_url_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>
+                  <div class="form-group">
+                    <label for="vault_version_value">VAULT_VERSION</label>
+                    <input type="txt" class="form-control" id="vault_version_value" placeholder="Value">
+                  </div>
+                  <button class="btn btn-primary" onclick="#">Save</button>
+                </form>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+        </div>
+      </div>    
+    
+        
+        
+        
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>Copyright &copy; 2014-2022 <a href="https://anthillagency.com">AnthillAgency.com</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Select2 -->
+<script src="../../plugins/select2/js/select2.full.min.js"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="../../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<!-- InputMask -->
+<script src="../../plugins/moment/moment.min.js"></script>
+<script src="../../plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="../../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Bootstrap Switch -->
+<script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!-- BS-Stepper -->
+<script src="../../plugins/bs-stepper/js/bs-stepper.min.js"></script>
+<!-- dropzonejs -->
+<script src="../../plugins/dropzone/min/dropzone.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+
+<!-- Page specific script -->
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2({
+      placeholder: "Value",
+      allowClear: true
+    })
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    //Money Euro
+    $('[data-mask]').inputmask()
+
+    //Date picker
+    $('#reservationdate').datetimepicker({
+        format: 'L'
+    });
+
+    //Date and time picker
+    $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+
+    //Date range picker
+    $('#reservation').daterangepicker()
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({
+      timePicker: true,
+      timePickerIncrement: 30,
+      locale: {
+        format: 'MM/DD/YYYY hh:mm A'
+      }
+    })
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+      {
+        ranges   : {
+          'Today'       : [moment(), moment()],
+          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        startDate: moment().subtract(29, 'days'),
+        endDate  : moment()
+      },
+      function (start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+      }
+    )
+
+    //Timepicker
+    $('#timepicker').datetimepicker({
+      format: 'LT'
+    })
+
+    //Bootstrap Duallistbox
+    $('.duallistbox').bootstrapDualListbox()
+
+    //Colorpicker
+    $('.my-colorpicker1').colorpicker()
+    //color picker with addon
+    $('.my-colorpicker2').colorpicker()
+
+    $('.my-colorpicker2').on('colorpickerChange', function(event) {
+      $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+    })
+
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    })
+
+  })
+  // BS-Stepper Init
+  document.addEventListener('DOMContentLoaded', function () {
+    window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+  })
+
+  // DropzoneJS Demo Code Start
+  Dropzone.autoDiscover = false
+
+  // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+  var previewNode = document.querySelector("#template")
+  previewNode.id = ""
+  var previewTemplate = previewNode.parentNode.innerHTML
+  previewNode.parentNode.removeChild(previewNode)
+
+  var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+    url: "/target-url", // Set the url
+    thumbnailWidth: 80,
+    thumbnailHeight: 80,
+    parallelUploads: 20,
+    previewTemplate: previewTemplate,
+    autoQueue: false, // Make sure the files aren't queued until manually added
+    previewsContainer: "#previews", // Define the container to display the previews
+    clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+  })
+
+  myDropzone.on("addedfile", function(file) {
+    // Hookup the start button
+    file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+  })
+
+  // Update the total progress bar
+  myDropzone.on("totaluploadprogress", function(progress) {
+    document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+  })
+
+  myDropzone.on("sending", function(file) {
+    // Show the total progress bar when upload starts
+    document.querySelector("#total-progress").style.opacity = "1"
+    // And disable the start button
+    file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+  })
+
+  // Hide the total progress bar when nothing's uploading anymore
+  myDropzone.on("queuecomplete", function(progress) {
+    document.querySelector("#total-progress").style.opacity = "0"
+  })
+
+  // Setup the buttons for all transfers
+  // The "add files" button doesn't need to be setup because the config
+  // `clickable` has already been specified.
+  document.querySelector("#actions .start").onclick = function() {
+    myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
+  }
+  document.querySelector("#actions .cancel").onclick = function() {
+    myDropzone.removeAllFiles(true)
+  }
+  // DropzoneJS Demo Code End
+</script>
+</body>
+</html>
