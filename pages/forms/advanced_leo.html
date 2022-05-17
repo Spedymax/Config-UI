@@ -240,559 +240,675 @@
       <div class="container-fluid">
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
-          <div class="card-header">
-            <h2>Vault field definitions</h2>
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body">
-            <div class="row">
-              <!-- /.col -->
-              <div class="col-md-6">
-                <label style = "font-size: 32px;">Renditions</label>
-                <form>
-                  <div class="form-group">
-                    <label for="default_rendition_value">DEFAULT_RENDITION </label>
-                    <input type="txt" class="form-control" id="default_rendition_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="distribution_pkg_rendition_value">DISTRIBUTION_PKG_RENDITION</label>
-                    <input type="txt" class="form-control" id="distribution_pkg_rendition_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="viewable_rendition_value">VIEWABLE_RENDITION</label>
-                    <input type="txt" class="form-control" id="viewable_rendition_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="assets_rendition_value">ASSETS_RENDITION</label>
-                    <input type="txt" class="form-control" id="assets_rendition_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="add_dist_pkg_rendition_manually_value">ADD_DIST_PKG_RENDITION_MANUALLY</label>
-                    <select class="form-control" id="add_dist_pkg_rendition_manually_value">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="add_viewable_rendition_manually_value">ADD_VIEWABLE_RENDITION_MANUALLY</label>
-                    <select class="form-control" id="add_viewable_rendition_manually_value">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>
-                </form>
-                <hr/>
-                <label style = "font-size: 32px;">Components</label>
-                <form>
-                  <div class="form-group">
-                    <label for="component_rel_value">COMPONENT_REL </label>
-                    <input type="txt" class="form-control" id="component_rel_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="email_component_rel_value">EMAIL_COMPONENT_REL</label>
-                    <input type="txt" class="form-control" id="email_component_rel_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="default_asset_types_value">DEFAULT_ASSET_TYPES</label>
-                    <input type="txt" class="form-control" id="default_asset_types_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="allow_asset_upload_value">ALLOW_ASSET_UPLOAD</label>
-                    <select class="form-control" id="allow_asset_upload_value">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>                 
-                </form>
-                <hr/>
-                <label style = "font-size: 32px;">Relationships</label>
-                <form>
-                  <div class="form-group">
-                    <label for="based_on_rel_value">BASED_ON_REL</label>
-                    <input type="txt" class="form-control" id="based_on_rel_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="original_source_rel_value">ORIGINAL_SOURCE_REL</label>
-                    <input type="txt" class="form-control" id="original_source_rel_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="shared_rel_value">SHARED_REL</label>
-                    <input type="txt" class="form-control" id="shared_rel_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="binder_shared_rel_value">BINDER_SHARED_REL</label>
-                    <input type="txt" class="form-control" id="binder_shared_rel_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="shared_flag_value">SHARED_FLAG</label>
-                    <input type="txt" class="form-control" id="shared_flag_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="versioned_relationships_value">VERSIONED_RELATIONSHIPS</label>
-                    <select class="form-control" id="versioned_relationships_value">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>
-                </form>
-                <!-- /.form-group -->
-                <form>
-                <hr/>
-                <label style = "font-size: 32px;">Modular Content</label>
-                  <div class="form-group">
-                    <label for="content_module_vault_query_value">CONTENT_MODULE_VAULT_QUERY</label>
-                    <input type="txt" class="form-control" id="content_module_vault_query_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="is_content_modules_hidden_value">IS_CONTENT_MODULES_HIDDEN</label>
-                    <select class="form-control" id="is_content_modules_hidden_value">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>
-                </form>
-                <!-- /.form-group -->
-                  
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="renditions-tab" data-toggle="tab" href="#renditions" role="tab" aria-controls="renditions" aria-selected="true">Renditions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="components-tab" data-toggle="tab" href="#components" role="tab" aria-controls="components" aria-selected="false">Components</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="relationships-tab" data-toggle="tab" href="#relationships" role="tab" aria-controls="relationships" aria-selected="false">Relationships</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="modular-tab" data-toggle="tab" href="#modular" role="tab" aria-controls="modular" aria-selected="false">Modular Content</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="workflow-tab" data-toggle="tab" href="#workflow" role="tab" aria-controls="workflow" aria-selected="false">Workflows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="emails-tab" data-toggle="tab" href="#emails" role="tab" aria-controls="emails" aria-selected="false">Emails</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="documents-tab" data-toggle="tab" href="#documents" role="tab" aria-controls="documents" aria-selected="false">Documents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="activator-tab" data-toggle="tab" href="#activator" role="tab" aria-controls="activator" aria-selected="false">Activator</a>
+            </li>
+            
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="renditions" role="tabpanel" aria-labelledby="renditions-tab">
+              <div class="card-header">
+              <h2>Vault field definitions</h2>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <label style = "font-size: 32px;">Renditions</label>
                     <form>
-                      <hr/>
+                      <div class="form-group">
+                        <label for="default_rendition_value">DEFAULT_RENDITION </label>
+                        <input type="txt" class="form-control" id="default_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="distribution_pkg_rendition_value">DISTRIBUTION_PKG_RENDITION</label>
+                        <input type="txt" class="form-control" id="distribution_pkg_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="viewable_rendition_value">VIEWABLE_RENDITION</label>
+                        <input type="txt" class="form-control" id="viewable_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="assets_rendition_value">ASSETS_RENDITION</label>
+                        <input type="txt" class="form-control" id="assets_rendition_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="add_dist_pkg_rendition_manually_value">ADD_DIST_PKG_RENDITION_MANUALLY</label>
+                        <select class="form-control" id="add_dist_pkg_rendition_manually_value">
+                          <option>True</option>
+                          <option>False</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="add_viewable_rendition_manually_value">ADD_VIEWABLE_RENDITION_MANUALLY</label>
+                        <select class="form-control" id="add_viewable_rendition_manually_value">
+                          <option>True</option>
+                          <option>False</option>
+                        </select>
+                      </div>
+                      <button class="btn btn-primary" onclick="#">Save</button>
+                    </form>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="components" role="tabpanel" aria-labelledby="components-tab">
+              <div class="card-header">
+                <h2>Vault field definitions</h2>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <label style = "font-size: 32px;">Components</label>
+                    <form>
+                      <div class="form-group">
+                        <label for="component_rel_value">COMPONENT_REL </label>
+                        <input type="txt" class="form-control" id="component_rel_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="email_component_rel_value">EMAIL_COMPONENT_REL</label>
+                        <input type="txt" class="form-control" id="email_component_rel_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="default_asset_types_value">DEFAULT_ASSET_TYPES</label>
+                        <input type="txt" class="form-control" id="default_asset_types_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="allow_asset_upload_value">ALLOW_ASSET_UPLOAD</label>
+                        <select class="form-control" id="allow_asset_upload_value">
+                          <option>True</option>
+                          <option>False</option>
+                        </select>
+                      </div>      
+                      <button class="btn btn-primary" onclick="#">Save</button>           
+                    </form>
+                  </div>  
+                </div>   
+              </div>   
+            </div>
+            <div class="tab-pane fade" id="relationships" role="tabpanel" aria-labelledby="relationships-tab">
+              <div class="card-header">
+                <h2>Vault field definitions</h2>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <label style = "font-size: 32px;">Relationships</label>
+                    <form>
+                      <div class="form-group">
+                        <label for="based_on_rel_value">BASED_ON_REL</label>
+                        <input type="txt" class="form-control" id="based_on_rel_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="original_source_rel_value">ORIGINAL_SOURCE_REL</label>
+                        <input type="txt" class="form-control" id="original_source_rel_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="shared_rel_value">SHARED_REL</label>
+                        <input type="txt" class="form-control" id="shared_rel_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="binder_shared_rel_value">BINDER_SHARED_REL</label>
+                        <input type="txt" class="form-control" id="binder_shared_rel_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="shared_flag_value">SHARED_FLAG</label>
+                        <input type="txt" class="form-control" id="shared_flag_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="versioned_relationships_value">VERSIONED_RELATIONSHIPS</label>
+                        <select class="form-control" id="versioned_relationships_value">
+                          <option>True</option>
+                          <option>False</option>
+                        </select>
+                      </div>
+                      <button class="btn btn-primary" onclick="#">Save</button>
+                    </form>
+                  </div>  
+                </div>   
+              </div>   
+            </div>
+            <div class="tab-pane fade" id="modular" role="tabpanel" aria-labelledby="modular-tab">
+              <div class="card-header">
+                <h2>Vault field definitions</h2>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <form>
+                    <label style = "font-size: 32px;">Modular Content</label>
+                      <div class="form-group">
+                        <label for="content_module_vault_query_value">CONTENT_MODULE_VAULT_QUERY</label>
+                        <input type="txt" class="form-control" id="content_module_vault_query_value" aria-describedby="emailHelp" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="is_content_modules_hidden_value">IS_CONTENT_MODULES_HIDDEN</label>
+                        <select class="form-control" id="is_content_modules_hidden_value">
+                          <option>True</option>
+                          <option>False</option>
+                        </select>
+                      </div>
+                      <button class="btn btn-primary" onclick="#">Save</button>
+                    </form>
+                  </div>  
+                </div>   
+              </div>   
+            </div>
+            <div class="tab-pane fade" id="workflow" role="tabpanel" aria-labelledby="workflow-tab">
+              <div class="card-header">
+                <h2>Vault field definitions</h2>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <form>
                       <label style = "font-size: 32px;">Workflows</label>
                         <div class="form-group">
                           <label for="approved_states_value">APPROVED_STATES</label>
                           <input type="txt" class="form-control" id="approved_states_value" aria-describedby="emailHelp" placeholder="Value">
                         </div>
+                        <button class="btn btn-primary" onclick="#">Save</button>
                     </form>
-                  
-                      
-                    <hr/>  
-                    
-                  <form>
-                    <label style = "font-size: 32px;">Emails</label>
-                      <div class="form-group">
-                        <label for="client_email_tokens_value">CLIENT_EMAIL_TOKENS</label>
-                        <h5>Group</h5>
-                        <p for="client_email_tokens_value">title</p>
-                        <input type="txt" class="form-control" id="client_email_tokens_value" placeholder="Value">
-                      </div> 
-                      <div class="form-group">  
-                        <p>
-                          
-                          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            Add
-                          </button>
-                        </p>
-                        <div class="collapse" id="collapseExample">
-                          <div class="card card-body">
-                            <div class="form-group">
-                              <label for="label_value">Label</label>
-                              <input type="txt" class="form-control" id="label_value" aria-describedby="emailHelp" placeholder="Value">
+                  </div>  
+                </div>   
+              </div>   
+            </div>
+            <div class="tab-pane fade" id="emails" role="tabpanel" aria-labelledby="emails-tab">
+              <div class="card-header">
+                <h2>Vault field definitions</h2>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <form>
+                      <label style = "font-size: 32px;">Emails</label>
+                        <div class="form-group">
+                          <label for="client_email_tokens_value">CLIENT_EMAIL_TOKENS</label>
+                          <h5>Group</h5>
+                          <p for="client_email_tokens_value">title</p>
+                          <input type="txt" class="form-control" id="client_email_tokens_value" placeholder="Value">
+                        </div> 
+                        <div class="form-group">  
+                          <p>
+                            
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                              Add
+                            </button>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                              <div class="form-group">
+                                <label for="label_value">Label</label>
+                                <input type="txt" class="form-control" id="label_value" aria-describedby="emailHelp" placeholder="Value">
+                              </div>
+                              <div class="form-group">
+                                <label for="value">Value</label>
+                                <select class="form-control" id="value">
+                                  <option>True</option>
+                                  <option>False</option>
+                                </select>
+                              </div>
+                              <button class="btn btn-primary" onclick="#">Save</button>
                             </div>
-                            <div class="form-group">
-                              <label for="value">Value</label>
-                              <select class="form-control" id="value">
-                                <option>True</option>
-                                <option>False</option>
-                              </select>
-                            </div>
-                            <button class="btn btn-primary" onclick="#">Save</button>
                           </div>
                         </div>
+                      </form>
+                  </div>  
+                </div>   
+              </div>   
+            </div>
+            <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+              <div class="card-header">
+                <h2>Vault field definitions</h2>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <label style = "font-size: 32px;">Documents</label>
+                    <form>
+                      <div class="form-group">
+                        <label for="default_document_type_value">DEFAULT_DOCUMENT_TYPE</label>
+                        <input type="txt" class="form-control" id="default_document_type_value" aria-describedby="emailHelp" placeholder="Value">
                       </div>
+                      <div class="form-group">
+                        <label for="versioned_relationship_value">VERSIONED_RELATIONSHIPS</label>
+                        <select class="form-control" id="versioned_relationship_value">
+                          <option>True</option>
+                          <option>False</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="brief_document_value">BRIEF_DOCUMENT_TYPE</label>
+                        <input type="txt" class="form-control" id="brief_document_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="is_use_activator_type_for_brief_value">IS_USE_ACTIVATOR_TYPE_FOR_BRIEF</label>
+                        <input type="txt" class="form-control" id="is_use_activator_type_for_brief_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="defaul_presentation_type_value">DEFAULT_PRESENTATION_TYPE</label>
+                        <input type="txt" class="form-control" id="defaul_presentation_type_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="default_email_template_type_value">DEFAULT_EMAIL_TEMPLATE_TYPE</label>
+                        <input type="txt" class="form-control" id="default_email_template_type_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="default_email_fragment_type_value">DEFAULT_EMAIL_FRAGMENT_TYPE</label>
+                        <input type="txt" class="form-control" id="default_email_fragment_type_value" placeholder="Value">
+                      </div>
+                      
+                    </form> 
+
+                  </div>
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-group">
+                        <label for="document_vault_types_value">DOCUMENT_VAULT_TYPES</label>
+                        <div class="form-group">
+                          <p for="document_vault_types_value">slide</p>
+                          <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                        </div>
+                        <div class="form-group">
+                          <p for="document_vault_types_value">brief</p>
+                          <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                        </div>
+                        <div class="form-group">
+                          <p for="document_vault_types_value">shared</p>
+                          <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                        </div>
+                        <div class="form-group">
+                          <p for="document_vault_types_value">binder</p>
+                          <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                        </div>
+                        <div class="form-group">
+                          <p for="document_vault_types_value">email</p>
+                          <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                        </div>
+                        <div class="form-group">
+                          <p for="document_vault_types_value">image</p>
+                          <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="vault_type_map_value">VAULT_TYPE_MAP</label>
+                        <p for="vault_type_map_value">slide</p>
+                        <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                        <p for="vault_type_map_value">brief</p>
+                          <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                      </div>
+                      <div class="form-group">
+                        <label for="client_vault_fields_value">CLIENT_VAULT_FIELDS</label>
+                        <p for="client_vault_fields_value">activatorType</p>
+                        <input type="txt" class="form-control" id="client_vault_fields_value" placeholder="Value">
+                      </div>
+                      <button class="btn btn-primary" onclick="#">Save</button>
+                    </form>  
+                  </div>     
+                </div>
+              </div> 
+            </div>    
+            <div class="tab-pane fade" id="activator" role="tabpanel" aria-labelledby="activator-tab">
+              <div class="card-header">
+                <h2>Vault field definitions</h2>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <label style = "font-size: 32px;">Activator</label>
+                    <form>
+                      <div class="form-group">
+                        <label for="delete_button_config_value">DELETE_BUTTON_CONFIG</label>
+                        <div class="form-group">
+                          <p for="client_vault_fields_value">hide </p>
+                          <select class="form-control" id="delete_button_config_value">
+                            <option>True</option>
+                            <option>False</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <p for="client_vault_fields_value">disabled </p>
+                          <select class="form-control" id="delete_button_config_value">
+                            <option>True</option>
+                            <option>False</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="show_dashboard_items_vault">SHOW_DASHBOARD_ITEMS</label>
+                        <select class="form-control" id="show_dashboard_items_vault">
+                          <option>True</option>
+                          <option>False</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="dashboard_type_records_value">DASHBOARD_TYPE_RECORDS</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" checked>
+                          <label class="form-check-label" for="flexCheckDefault1">
+                            slides
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked>
+                          <label class="form-check-label" for="flexCheckDefault2">
+                            binders
+                          </label>
+                        </div>
+                        <div class="form-check"> 
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" checked>
+                          <label class="form-check-label" for="flexCheckDefault3">
+                            briefs
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" checked>
+                          <label class="form-check-label" for="flexCheckDefault4">
+                            emails
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="entity_types_allowed_to_publish_value">ENTITY_TYPES_ALLOWED_TO_PUBLISH</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" checked>
+                          <label class="form-check-label" for="flexCheckDefault5">
+                            slide
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" checked>
+                          <label class="form-check-label" for="flexCheckDefault6">
+                            binder
+                          </label>
+                        </div>
+                        <div class="form-check"> 
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7" checked>
+                          <label class="form-check-label" for="flexCheckDefault7">
+                            brief
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8" checked>
+                          <label class="form-check-label" for="flexCheckDefault8">
+                            email
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9" checked>
+                          <label class="form-check-label" for="flexCheckDefault9">
+                            shared
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="omit_in_binder_type_records_value">OMIT_IN_BINDER_TYPE_RECORDS</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10" >
+                          <label class="form-check-label" for="flexCheckDefault10">
+                            slides
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11" >
+                          <label class="form-check-label" for="flexCheckDefault11">
+                            binders
+                          </label>
+                        </div>
+                        <div class="form-check"> 
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12" >
+                          <label class="form-check-label" for="flexCheckDefault12">
+                            briefs
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13" checked>
+                          <label class="form-check-label" for="flexCheckDefault13">
+                            emails
+                          </label>
+                        </div>
+                        <div class="form-group">
+                          <label for="show_only_activator_content_value">SHOW_ONLY_ACTIVATOR_CONTENT </label>
+                          <select class="form-control" id="show_only_activator_content_value">
+                            <option>True</option>
+                            <option>False</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="allow_oce_export_value">ALLOW_OCE_EXPORT</label>
+                          <select class="form-control" id="allow_oce_export_value">
+                            <option>True</option>
+                            <option>False</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="filtered_sidenav_items_value">FILTERED_SIDENAV_ITEMS</label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13" >
+                            <label class="form-check-label" for="flexCheckDefault13">
+                              createSlide                        
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14" >
+                            <label class="form-check-label" for="flexCheckDefault14">
+                              createEmail
+                            </label>
+                          </div>
+                          <div class="form-check"> 
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15" >
+                            <label class="form-check-label" for="flexCheckDefault15">
+                              createBinder
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault16">
+                            <label class="form-check-label" for="flexCheckDefault16">
+                              duplicateDoc
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="vault_type_map_value">CLIENT_DUPLICATE_BUTTON_HIDDEN</label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                            <label class="form-check-label" for="flexCheckDefault">
+                              slides
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                            <label class="form-check-label" for="flexCheckDefault">
+                              binders
+                            </label>
+                          </div>
+                          <div class="form-check"> 
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                            <label class="form-check-label" for="flexCheckDefault">
+                              briefs
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+                            <label class="form-check-label" for="flexCheckDefault">
+                              emails
+                            </label>
+                          </div>
+                          
+                        </div>
+                        <div class="form-group">
+                          <label for="client_vault_fields_value">CONVERT_TO_FRAGMENT_BUTTON</label>
+                          <div class="form-group">
+                            <p for="client_vault_fields_value">hide </p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <p for="client_vault_fields_value">disabled </p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>
+                        </div>
+                      
                     </form>
                     
-              </div>
-              <div class="col-md-6">
-                <label style = "font-size: 32px;">Documents</label>
-                <form>
-                  <div class="form-group">
-                    <label for="default_document_type_value">DEFAULT_DOCUMENT_TYPE</label>
-                    <input type="txt" class="form-control" id="default_document_type_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="versioned_relationship_value">VERSIONED_RELATIONSHIPS</label>
-                    <select class="form-control" id="versioned_relationship_value">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="brief_document_value">BRIEF_DOCUMENT_TYPE</label>
-                    <input type="txt" class="form-control" id="brief_document_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="is_use_activator_type_for_brief_value">IS_USE_ACTIVATOR_TYPE_FOR_BRIEF</label>
-                    <input type="txt" class="form-control" id="is_use_activator_type_for_brief_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="defaul_presentation_type_value">DEFAULT_PRESENTATION_TYPE</label>
-                    <input type="txt" class="form-control" id="defaul_presentation_type_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="default_email_template_type_value">DEFAULT_EMAIL_TEMPLATE_TYPE</label>
-                    <input type="txt" class="form-control" id="default_email_template_type_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="default_email_fragment_type_value">DEFAULT_EMAIL_FRAGMENT_TYPE</label>
-                    <input type="txt" class="form-control" id="default_email_fragment_type_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="document_vault_types_value">DOCUMENT_VAULT_TYPES</label>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">slide</p>
-                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
-                    </div>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">brief</p>
-                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
-                    </div>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">shared</p>
-                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
-                    </div>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">binder</p>
-                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
-                    </div>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">email</p>
-                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
-                    </div>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">image</p>
-                      <input type="txt" class="form-control" id="document_vault_types_value" placeholder="Value">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="vault_type_map_value">VAULT_TYPE_MAP</label>
-                    <p for="vault_type_map_value">slide</p>
-                    <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
-                    <p for="vault_type_map_value">brief</p>
-                      <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="client_vault_fields_value">CLIENT_VAULT_FIELDS</label>
-                    <p for="client_vault_fields_value">activatorType</p>
-                    <input type="txt" class="form-control" id="client_vault_fields_value" placeholder="Value">
-                  </div>
-                </form>
-                <!-- /.form-group -->
-                <hr/>
-                <label style = "font-size: 32px;">Activator</label>
-                <form>
-                  <div class="form-group">
-                    <label for="delete_button_config_value">DELETE_BUTTON_CONFIG</label>
-                    <div class="form-group">
-                      <p for="client_vault_fields_value">hide </p>
-                      <select class="form-control" id="delete_button_config_value">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <p for="client_vault_fields_value">disabled </p>
-                      <select class="form-control" id="delete_button_config_value">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="show_dashboard_items_vault">SHOW_DASHBOARD_ITEMS</label>
-                    <select class="form-control" id="show_dashboard_items_vault">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="dashboard_type_records_value">DASHBOARD_TYPE_RECORDS</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" checked>
-                      <label class="form-check-label" for="flexCheckDefault1">
-                        slides
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked>
-                      <label class="form-check-label" for="flexCheckDefault2">
-                        binders
-                      </label>
-                    </div>
-                    <div class="form-check"> 
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" checked>
-                      <label class="form-check-label" for="flexCheckDefault3">
-                        briefs
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" checked>
-                      <label class="form-check-label" for="flexCheckDefault4">
-                        emails
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="entity_types_allowed_to_publish_value">ENTITY_TYPES_ALLOWED_TO_PUBLISH</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" checked>
-                      <label class="form-check-label" for="flexCheckDefault5">
-                        slide
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" checked>
-                      <label class="form-check-label" for="flexCheckDefault6">
-                        binder
-                      </label>
-                    </div>
-                    <div class="form-check"> 
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7" checked>
-                      <label class="form-check-label" for="flexCheckDefault7">
-                        brief
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8" checked>
-                      <label class="form-check-label" for="flexCheckDefault8">
-                        email
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9" checked>
-                      <label class="form-check-label" for="flexCheckDefault9">
-                        shared
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="omit_in_binder_type_records_value">OMIT_IN_BINDER_TYPE_RECORDS</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10" >
-                      <label class="form-check-label" for="flexCheckDefault10">
-                        slides
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11" >
-                      <label class="form-check-label" for="flexCheckDefault11">
-                        binders
-                      </label>
-                    </div>
-                    <div class="form-check"> 
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12" >
-                      <label class="form-check-label" for="flexCheckDefault12">
-                        briefs
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13" checked>
-                      <label class="form-check-label" for="flexCheckDefault13">
-                        emails
-                      </label>
-                    </div>
-                  <div class="form-group">
-                    <label for="show_only_activator_content_value">SHOW_ONLY_ACTIVATOR_CONTENT </label>
-                    <select class="form-control" id="show_only_activator_content_value">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="allow_oce_export_value">ALLOW_OCE_EXPORT</label>
-                    <select class="form-control" id="allow_oce_export_value">
-                      <option>True</option>
-                      <option>False</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="filtered_sidenav_items_value">FILTERED_SIDENAV_ITEMS</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13" >
-                      <label class="form-check-label" for="flexCheckDefault13">
-                        createSlide                        
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14" >
-                      <label class="form-check-label" for="flexCheckDefault14">
-                        createEmail
-                      </label>
-                    </div>
-                    <div class="form-check"> 
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15" >
-                      <label class="form-check-label" for="flexCheckDefault15">
-                        createBinder
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault16">
-                      <label class="form-check-label" for="flexCheckDefault16">
-                        duplicateDoc
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="vault_type_map_value">CLIENT_DUPLICATE_BUTTON_HIDDEN</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                      <label class="form-check-label" for="flexCheckDefault">
-                        slides
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                      <label class="form-check-label" for="flexCheckDefault">
-                        binders
-                      </label>
-                    </div>
-                    <div class="form-check"> 
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                      <label class="form-check-label" for="flexCheckDefault">
-                        briefs
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-                      <label class="form-check-label" for="flexCheckDefault">
-                        emails
-                      </label>
-                    </div>
-                    
-                  </div>
-                  <div class="form-group">
-                    <label for="client_vault_fields_value">CONVERT_TO_FRAGMENT_BUTTON</label>
-                    <div class="form-group">
-                      <p for="client_vault_fields_value">hide </p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <p for="client_vault_fields_value">disabled </p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="client_vault_fields_value">ACTIVATOR_METADATA_FIELDS</label>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">isInUse </p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">activatorVersion </p>
-                      <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">createdInActivator </p>
-                      <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">lastModifiedInActivator </p>
-                      <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
-                    </div>  
-                  </div>
-                  <div class="form-group">
-                    <p for="client_vault_fields_value">lastModifiedInActivatorBy </p>
-                    <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="HIDE_MEDIA_LIBRARY_TYPES_FOR_EMAIL_value">HIDE_MEDIA_LIBRARY_TYPES_FOR_EMAIL</label>
-                    <div class="form-group">
-                      <select class="form-control" id="HIDE_MEDIA_LIBRARY_TYPES_FOR_EMAIL_value">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                  </div>
-                  <div class="form-group">
-                    
-                    <label for="MEDIA_LIBRARY_POPUP_FILTERS_VISIBILITY_value">MEDIA_LIBRARY_POPUP_FILTERS_VISIBILITY</label>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">productFilter</p>
-                      <select class="form-control" id="MEDIA_LIBRARY_POPUP_FILTERS_VISIBILITY_value">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">countryFilter</p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">languageFilter</p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">typeFilter</p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">dateFilter</p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                   
-                  </div>
-                  <div class="form-group">
-                    <label for="media_asset_group_visibility_value">MEDIA_ASSET_GROUP_VISIBILITY</label>
-                    <div class="form-group">
-                      <p for="document_vault_types_value">local</p>
-                      <select class="form-control" id="media_asset_group_visibility_value">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">shared</p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">vault</p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                    <div class="form-group">
-                      <p for="document_vault_types_value">web</p>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                        <option>True</option>
-                        <option>False</option>
-                      </select>
-                    </div>  
-                   
-                  </div>
-                  <button class="btn btn-primary" onclick="#">Save</button>
-                </form>
-              </div>
-              <!-- /.col -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.card-body -->
+                  </div>  
+                </div>  
+                  
+                <div class="col-md-6">
+                  <form>
+                        
+                        <div class="form-group">
+                          <label for="client_vault_fields_value">ACTIVATOR_METADATA_FIELDS</label>
+                          <div class="form-group">
+                            <p for="document_vault_types_value">isInUse </p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">activatorVersion </p>
+                            <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">createdInActivator </p>
+                            <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">lastModifiedInActivator </p>
+                            <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                          </div>  
+                        </div>
+                        <div class="form-group">
+                          <p for="client_vault_fields_value">lastModifiedInActivatorBy </p>
+                          <input type="txt" class="form-control" id="vault_type_map_value" placeholder="Value">
+                        </div>
+                        <div class="form-group">
+                          <label for="HIDE_MEDIA_LIBRARY_TYPES_FOR_EMAIL_value">HIDE_MEDIA_LIBRARY_TYPES_FOR_EMAIL</label>
+                          <div class="form-group">
+                            <select class="form-control" id="HIDE_MEDIA_LIBRARY_TYPES_FOR_EMAIL_value">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                        </div>
+                        <div class="form-group">
+                          
+                          <label for="MEDIA_LIBRARY_POPUP_FILTERS_VISIBILITY_value">MEDIA_LIBRARY_POPUP_FILTERS_VISIBILITY</label>
+                          <div class="form-group">
+                            <p for="document_vault_types_value">productFilter</p>
+                            <select class="form-control" id="MEDIA_LIBRARY_POPUP_FILTERS_VISIBILITY_value">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">countryFilter</p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">languageFilter</p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">typeFilter</p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">dateFilter</p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                        
+                        </div>
+                        <div class="form-group">
+                          <label for="media_asset_group_visibility_value">MEDIA_ASSET_GROUP_VISIBILITY</label>
+                          <div class="form-group">
+                            <p for="document_vault_types_value">local</p>
+                            <select class="form-control" id="media_asset_group_visibility_value">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">shared</p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">vault</p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                          <div class="form-group">
+                            <p for="document_vault_types_value">web</p>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>  
+                        
+                        </div>
+                        <button class="btn btn-primary" onclick="#">Save</button>
+                  </form>
+                </div>      
+              </div>  
+            </div>   
+          </div>   
         </div>
-        <!-- /.card -->
       </div>
+    <!-- /.card -->
+    </div>
     </section>  
     <section class="content">
       <div class="container-fluid">  
