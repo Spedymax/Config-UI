@@ -1,0 +1,13 @@
+{
+    "vault_field_definitions": [
+        {
+            "modular_content": [
+                {
+
+                "CONTENT_MODULE_VAULT_QUERY":"string",
+                "IS_CONTENT_MODULES_HIDDEN":"boolean"
+                }
+            ]
+        }
+    ]  
+}
