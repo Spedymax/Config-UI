@@ -1,0 +1,31 @@
+[
+    {
+        "CONTENT_MODULE_VAULT_QUERY":[
+            {
+                "name":"CONTENT_MODULE_VAULT_QUERY",
+                "type":"string"
+            }
+        ],
+        "IS_CONTENT_MODULES_HIDDEN":[
+            {
+                "name":"IS_CONTENT_MODULES_HIDDEN",
+                "type":"boolean"
+            }
+        ]
+    },
+    {
+        "VAULT_LOGIN_URL":[
+            {
+                "name":"VAULT_LOGIN_URL",
+                "type":"string"
+            }
+        ],
+        "VAULT_VERSION":[
+            {
+                "name":"VAULT_VERSION",
+                "type":"string"
+            }
+        ]
+    }
+
+]

@@ -170,7 +170,6 @@
                   </li>
                 </ul>
               </li>
-              
             </ul>
           </li>
           
@@ -199,6 +198,7 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
+    
 
     <!-- Main content -->
     <section class="content">
@@ -229,6 +229,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" id="activator-tab" data-toggle="tab" href="#activator" role="tab" aria-controls="activator" aria-selected="false">Activator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="configuration-tab" data-toggle="tab" href="#configuration" role="tab" aria-controls="configuration" aria-selected="false">Configuration</a>
             </li>
             
           </ul>
@@ -307,7 +310,7 @@
                           <option>True</option>
                           <option>False</option>
                         </select>
-                      </div>      
+                      </div>
                       <button class="btn btn-primary" onclick="#">Save</button>           
                     </form>
                   </div>  
@@ -368,16 +371,13 @@
                   <div class="col-md-6">
                     <form>
                     <label style = "font-size: 32px;">Modular Content</label>
-                      <div class="form-group">
-                        <label for="content_module_vault_query_value">CONTENT_MODULE_VAULT_QUERY</label>
-                        <input type="txt" class="form-control" id="content_module_vault_query_value" aria-describedby="emailHelp" placeholder="Value">
-                      </div>
-                      <div class="form-group">
-                        <label for="is_content_modules_hidden_value">IS_CONTENT_MODULES_HIDDEN</label>
-                        <select class="form-control" id="is_content_modules_hidden_value">
-                          <option>True</option>
-                          <option>False</option>
-                        </select>
+                      <div class="form-group" id ="CONTENT_MODULE_VAULT_QUERY_type_id">
+                        <label for="content_module_vault_query_value"><div id="CONTENT_MODULE_VAULT_QUERY_name"></div></label>
+                        <div id="CONTENT_MODULE_VAULT_QUERY_type"></div>
+                    </div>
+                      <div class="form-group" id ="IS_CONTENT_MODULES_HIDDEN_type_id">
+                        <label for="is_content_modules_hidden_value"><div id="IS_CONTENT_MODULES_HIDDEN_name"></div></label>
+                        <div id="IS_CONTENT_MODULES_HIDDEN_type"></div>
                       </div>
                       <button class="btn btn-primary" onclick="#">Save</button>
                     </form>
@@ -867,52 +867,75 @@
                         <button class="btn btn-primary" onclick="#">Save</button>
                   </form>
                 </div>      
-              </div>  
-            </div>   
+              </div>
+            </div>  
+          </div>
+            <div class="tab-pane fade" id="configuration" role="tabpanel" aria-labelledby="configuration-tab">
+              <div class="card-header">
+                <h2>Vault configuration </h2>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <!-- /.col -->
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-group" id = "VAULT_LOGIN_URL_type_id">
+                        <label for="vault_login_url_value"><div id="VAULT_LOGIN_URL_name"></div></label>
+                        <div id="VAULT_LOGIN_URL_type"></div>
+                      </div>
+                      <div class="form-group" id = "VAULT_VERSION_type_id">
+                        <label for="vault_version_value"><div id="VAULT_VERSION_name"></div></label>
+                        <div id="VAULT_VERSION_type"></div>
+                      </div>
+                      <button class="btn btn-primary" onclick="#">Save</button>
+                    </form>
+                    <!-- /.form-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+            </div>
+
+             
           </div>   
+          
+        </div>
+        <div class="card-deck">
+          <div class="card">
+            
+            <div class="card-body">
+              <h4>Instructions</h4>
+              <p class="card-text">Here will be some instructions if needed on how to fill in the forms.</p>
+            </div>
+          </div>
+          <div class="card">
+            
+            <div class="card-body">
+              <h4 >Info about client and environment</h4>
+              <p class="card-text">Here will information about client and environments that client is using.</p>
+            </div>
+          </div>
+          <div class="card">
+            
+            <div class="card-body">
+              <h4>Contacts</h4>
+              <p class="card-text">Here will be contact section to contact clients.</p>
+              <p class="card-text"><strong>Email:</strong> abcdef@gmail.com</p>
+              <p class="card-text"><strong>Phone:</strong> +451234567</p>
+            </div>
+          </div>
         </div>
       </div>
+      
     <!-- /.card -->
+    
     </div>
     </section>  
-    <section class="content">
-      <div class="container-fluid">  
-        <div class="card card-default">
-          <div class="card-header">
-            <h2>Vault configuration </h2>
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body">
-            <div class="row">
-              <!-- /.col -->
-              <div class="col-md-6">
-                <form>
-                  <div class="form-group">
-                    <label for="vault_login_url_value">VAULT_LOGIN_URL</label>
-                    <input type="txt" class="form-control" id="vault_login_url_value" aria-describedby="emailHelp" placeholder="Value">
-                  </div>
-                  <div class="form-group">
-                    <label for="vault_version_value">VAULT_VERSION</label>
-                    <input type="txt" class="form-control" id="vault_version_value" placeholder="Value">
-                  </div>
-                  <button class="btn btn-primary" onclick="#">Save</button>
-                </form>
-                <!-- /.form-group -->
-              </div>
-              <!-- /.col -->
-            </div>
-            <!-- /.row -->
-          </div>
-        </div>
-      </div>    
     
-        
-        
-        
-      <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
+    <!-- /.ontet -->
+  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
@@ -920,7 +943,7 @@
     </div>
     <strong>Copyright &copy; 2014-2022 <a href="https://anthillagency.com">AnthillAgency.com</a>.</strong> All rights reserved.
   </footer>
-
+</div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -963,6 +986,7 @@
 <script src="../../plugins/dropzone/min/dropzone.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
+
 
 <!-- Page specific script -->
 <script>
@@ -1102,5 +1126,6 @@
   }
   // DropzoneJS Demo Code End
 </script>
+<script src="modular_content.js"></script>
 </body>
 </html>
