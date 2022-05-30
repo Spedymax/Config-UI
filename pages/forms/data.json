@@ -1,5 +1,13 @@
-[
-    {
+{
+    "RENDIIONS":[
+        
+    ],
+    "Components":[
+        
+    ],
+    "Relationships":[],
+    "ModularContent":[
+        {
         "CONTENT_MODULE_VAULT_QUERY":[
             {
                 "name":"CONTENT_MODULE_VAULT_QUERY",
@@ -12,20 +20,26 @@
                 "type":"boolean"
             }
         ]
-    },
-    {
-        "VAULT_LOGIN_URL":[
-            {
-                "name":"VAULT_LOGIN_URL",
-                "type":"string"
-            }
-        ],
-        "VAULT_VERSION":[
-            {
-                "name":"VAULT_VERSION",
-                "type":"string"
-            }
-        ]
     }
-
-]
+],
+    "Workflows":[],
+    "Emails":[],
+    "Documents":[],
+    "Activator":[],
+    "Configuration":[
+        {
+            "VAULT_LOGIN_URL":[
+                {
+                    "name":"VAULT_LOGIN_URL",
+                    "type":"string"
+                }
+            ],
+            "VAULT_VERSION":[
+                {
+                    "name":"VAULT_VERSION",
+                    "type":"string"
+                }
+            ]
+        }
+    ]        
+}

@@ -12,11 +12,11 @@ fetch('data.json').then(function (response) {
 
 function modularContent(data) {
   var getElem1 = document.getElementById('CONTENT_MODULE_VAULT_QUERY_name');
-  getElem1.innerHTML = data[0].CONTENT_MODULE_VAULT_QUERY[0].name;
+  getElem1.innerHTML = data.ModularContent[0].CONTENT_MODULE_VAULT_QUERY[0].name;
   var getElem3 = document.getElementById('IS_CONTENT_MODULES_HIDDEN_name');
-  getElem3.innerHTML = data[0].IS_CONTENT_MODULES_HIDDEN[0].name;
+  getElem3.innerHTML = data.ModularContent[0].IS_CONTENT_MODULES_HIDDEN[0].name;
 
-  if (data[0].CONTENT_MODULE_VAULT_QUERY[0].type === 'string') {
+  if (data.ModularContent[0].CONTENT_MODULE_VAULT_QUERY[0].type === 'string') {
     var input = document.createElement('input');
     input.type = 'txt';
     input.className = 'form-control';
@@ -25,7 +25,7 @@ function modularContent(data) {
     okay.appendChild(input);
   }
 
-  if (data[0].IS_CONTENT_MODULES_HIDDEN[0].type === 'boolean') {
+  if (data.ModularContent[0].IS_CONTENT_MODULES_HIDDEN[0].type === 'boolean') {
     var select = document.createElement('select');
     select.className = 'form-control';
     var option1 = document.createElement('option');
@@ -41,11 +41,11 @@ function modularContent(data) {
 
 function vaultConfiguration(data) {
   var getElem1 = document.getElementById('VAULT_LOGIN_URL_name');
-  getElem1.innerHTML = data[1].VAULT_LOGIN_URL[0].name;
+  getElem1.innerHTML = data.Configuration[0].VAULT_LOGIN_URL[0].name;
   var getElem3 = document.getElementById('VAULT_VERSION_name');
-  getElem3.innerHTML = data[1].VAULT_VERSION[0].name;
+  getElem3.innerHTML = data.Configuration[0].VAULT_VERSION[0].name;
 
-  if (data[1].VAULT_LOGIN_URL[0].type === 'string') {
+  if (data.Configuration[0].VAULT_LOGIN_URL[0].type === 'string') {
     var input = document.createElement('input');
     input.type = 'txt';
     input.className = 'form-control';
@@ -54,7 +54,7 @@ function vaultConfiguration(data) {
     okay.appendChild(input);
   }
 
-  if (data[1].VAULT_VERSION[0].type === 'string') {
+  if (data.Configuration[0].VAULT_VERSION[0].type === 'string') {
     var _input = document.createElement('input');
 
     _input.type = 'txt';

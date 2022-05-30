@@ -24,9 +24,10 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
 
-      <form action="../../index.html" method="post">
+      <form onclick = "setCookie('name', document.getElementById('name_id').value, 30);
+      setCookie('password', document.getElementById('password_id').value, 30); " >
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name">
+          <input type="text" class="form-control" placeholder="Full name" id="name_id" value>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -34,7 +35,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" placeholder="Email" name="email_id" value>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -42,7 +43,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" id="password_id" value>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -99,5 +100,6 @@
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
+<script src="cookie.js"></script>
 </body>
 </html>

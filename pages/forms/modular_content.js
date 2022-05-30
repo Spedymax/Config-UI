@@ -13,11 +13,11 @@ fetch('data.json')
 
 function modularContent(data) {
   const getElem1 = document.getElementById('CONTENT_MODULE_VAULT_QUERY_name')
-  getElem1.innerHTML = data[0].CONTENT_MODULE_VAULT_QUERY[0].name
+  getElem1.innerHTML = data.ModularContent[0].CONTENT_MODULE_VAULT_QUERY[0].name
   const getElem3 = document.getElementById('IS_CONTENT_MODULES_HIDDEN_name')
-  getElem3.innerHTML = data[0].IS_CONTENT_MODULES_HIDDEN[0].name
+  getElem3.innerHTML = data.ModularContent[0].IS_CONTENT_MODULES_HIDDEN[0].name
 
-  if (data[0].CONTENT_MODULE_VAULT_QUERY[0].type === 'string') {
+  if (data.ModularContent[0].CONTENT_MODULE_VAULT_QUERY[0].type === 'string') {
     const input = document.createElement('input')
     input.type = 'txt'
     input.className = 'form-control'
@@ -26,7 +26,7 @@ function modularContent(data) {
     okay.appendChild(input)
   }
 
-  if (data[0].IS_CONTENT_MODULES_HIDDEN[0].type === 'boolean') {
+  if (data.ModularContent[0].IS_CONTENT_MODULES_HIDDEN[0].type === 'boolean') {
     const select = document.createElement('select')
     select.className = 'form-control'
     const option1 = document.createElement('option')
@@ -42,12 +42,12 @@ function modularContent(data) {
 
 function vaultConfiguration(data) {
   const getElem1 = document.getElementById('VAULT_LOGIN_URL_name')
-  getElem1.innerHTML = data[1].VAULT_LOGIN_URL[0].name
+  getElem1.innerHTML = data.Configuration[0].VAULT_LOGIN_URL[0].name
 
   const getElem3 = document.getElementById('VAULT_VERSION_name')
-  getElem3.innerHTML = data[1].VAULT_VERSION[0].name
+  getElem3.innerHTML = data.Configuration[0].VAULT_VERSION[0].name
 
-  if (data[1].VAULT_LOGIN_URL[0].type === 'string') {
+  if (data.Configuration[0].VAULT_LOGIN_URL[0].type === 'string') {
     const input = document.createElement('input')
     input.type = 'txt'
     input.className = 'form-control'
@@ -56,7 +56,7 @@ function vaultConfiguration(data) {
     okay.appendChild(input)
   }
 
-  if (data[1].VAULT_VERSION[0].type === 'string') {
+  if (data.Configuration[0].VAULT_VERSION[0].type === 'string') {
     const input = document.createElement('input')
     input.type = 'txt'
     input.className = 'form-control'
@@ -65,3 +65,4 @@ function vaultConfiguration(data) {
     okay.appendChild(input)
   }
 }
+
