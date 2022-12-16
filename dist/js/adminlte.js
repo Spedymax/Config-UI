@@ -24,17 +24,17 @@
    * ====================================================
    */
 
-  var NAME$e = 'CardRefresh';
-  var DATA_KEY$e = 'lte.cardrefresh';
-  var EVENT_KEY$7 = "." + DATA_KEY$e;
-  var JQUERY_NO_CONFLICT$e = $__default["default"].fn[NAME$e];
-  var EVENT_LOADED = "loaded" + EVENT_KEY$7;
-  var EVENT_OVERLAY_ADDED = "overlay.added" + EVENT_KEY$7;
-  var EVENT_OVERLAY_REMOVED = "overlay.removed" + EVENT_KEY$7;
+  var NAME$d = 'CardRefresh';
+  var DATA_KEY$d = 'lte.cardrefresh';
+  var EVENT_KEY$6 = "." + DATA_KEY$d;
+  var JQUERY_NO_CONFLICT$d = $__default["default"].fn[NAME$d];
+  var EVENT_LOADED = "loaded" + EVENT_KEY$6;
+  var EVENT_OVERLAY_ADDED = "overlay.added" + EVENT_KEY$6;
+  var EVENT_OVERLAY_REMOVED = "overlay.removed" + EVENT_KEY$6;
   var CLASS_NAME_CARD$1 = 'card';
   var SELECTOR_CARD$1 = "." + CLASS_NAME_CARD$1;
   var SELECTOR_DATA_REFRESH = '[data-card-widget="card-refresh"]';
-  var Default$c = {
+  var Default$b = {
     source: '',
     sourceSelector: '',
     params: {},
@@ -57,7 +57,7 @@
     function CardRefresh(element, settings) {
       this._element = element;
       this._parent = element.parents(SELECTOR_CARD$1).first();
-      this._settings = $__default["default"].extend({}, Default$c, settings);
+      this._settings = $__default["default"].extend({}, Default$b, settings);
       this._overlay = $__default["default"](this._settings.overlayTemplate);
 
       if (element.hasClass(CLASS_NAME_CARD$1)) {
@@ -131,13 +131,13 @@
     ;
 
     CardRefresh._jQueryInterface = function _jQueryInterface(config) {
-      var data = $__default["default"](this).data(DATA_KEY$e);
+      var data = $__default["default"](this).data(DATA_KEY$d);
 
-      var _options = $__default["default"].extend({}, Default$c, $__default["default"](this).data());
+      var _options = $__default["default"].extend({}, Default$b, $__default["default"](this).data());
 
       if (!data) {
         data = new CardRefresh($__default["default"](this), _options);
-        $__default["default"](this).data(DATA_KEY$e, typeof config === 'string' ? data : config);
+        $__default["default"](this).data(DATA_KEY$d, typeof config === 'string' ? data : config);
       }
 
       if (typeof config === 'string' && /load/.test(config)) {
@@ -172,11 +172,11 @@
    * ====================================================
    */
 
-  $__default["default"].fn[NAME$e] = CardRefresh._jQueryInterface;
-  $__default["default"].fn[NAME$e].Constructor = CardRefresh;
+  $__default["default"].fn[NAME$d] = CardRefresh._jQueryInterface;
+  $__default["default"].fn[NAME$d].Constructor = CardRefresh;
 
-  $__default["default"].fn[NAME$e].noConflict = function () {
-    $__default["default"].fn[NAME$e] = JQUERY_NO_CONFLICT$e;
+  $__default["default"].fn[NAME$d].noConflict = function () {
+    $__default["default"].fn[NAME$d] = JQUERY_NO_CONFLICT$d;
     return CardRefresh._jQueryInterface;
   };
 
@@ -191,15 +191,15 @@
    * ====================================================
    */
 
-  var NAME$d = 'CardWidget';
-  var DATA_KEY$d = 'lte.cardwidget';
-  var EVENT_KEY$6 = "." + DATA_KEY$d;
-  var JQUERY_NO_CONFLICT$d = $__default["default"].fn[NAME$d];
-  var EVENT_EXPANDED$3 = "expanded" + EVENT_KEY$6;
-  var EVENT_COLLAPSED$4 = "collapsed" + EVENT_KEY$6;
-  var EVENT_MAXIMIZED = "maximized" + EVENT_KEY$6;
-  var EVENT_MINIMIZED = "minimized" + EVENT_KEY$6;
-  var EVENT_REMOVED$1 = "removed" + EVENT_KEY$6;
+  var NAME$c = 'CardWidget';
+  var DATA_KEY$c = 'lte.cardwidget';
+  var EVENT_KEY$5 = "." + DATA_KEY$c;
+  var JQUERY_NO_CONFLICT$c = $__default["default"].fn[NAME$c];
+  var EVENT_EXPANDED$3 = "expanded" + EVENT_KEY$5;
+  var EVENT_COLLAPSED$4 = "collapsed" + EVENT_KEY$5;
+  var EVENT_MAXIMIZED = "maximized" + EVENT_KEY$5;
+  var EVENT_MINIMIZED = "minimized" + EVENT_KEY$5;
+  var EVENT_REMOVED$1 = "removed" + EVENT_KEY$5;
   var CLASS_NAME_CARD = 'card';
   var CLASS_NAME_COLLAPSED$1 = 'collapsed-card';
   var CLASS_NAME_COLLAPSING = 'collapsing-card';
@@ -213,7 +213,7 @@
   var SELECTOR_CARD_HEADER = '.card-header';
   var SELECTOR_CARD_BODY = '.card-body';
   var SELECTOR_CARD_FOOTER = '.card-footer';
-  var Default$b = {
+  var Default$a = {
     animationSpeed: 'normal',
     collapseTrigger: SELECTOR_DATA_COLLAPSE,
     removeTrigger: SELECTOR_DATA_REMOVE,
@@ -233,7 +233,7 @@
         this._parent = element;
       }
 
-      this._settings = $__default["default"].extend({}, Default$b, settings);
+      this._settings = $__default["default"].extend({}, Default$a, settings);
     }
 
     var _proto = CardWidget.prototype;
@@ -348,13 +348,13 @@
     ;
 
     CardWidget._jQueryInterface = function _jQueryInterface(config) {
-      var data = $__default["default"](this).data(DATA_KEY$d);
+      var data = $__default["default"](this).data(DATA_KEY$c);
 
-      var _options = $__default["default"].extend({}, Default$b, $__default["default"](this).data());
+      var _options = $__default["default"].extend({}, Default$a, $__default["default"](this).data());
 
       if (!data) {
         data = new CardWidget($__default["default"](this), _options);
-        $__default["default"](this).data(DATA_KEY$d, typeof config === 'string' ? data : config);
+        $__default["default"](this).data(DATA_KEY$c, typeof config === 'string' ? data : config);
       }
 
       if (typeof config === 'string' && /collapse|expand|remove|toggle|maximize|minimize|toggleMaximize/.test(config)) {
@@ -398,11 +398,11 @@
    * ====================================================
    */
 
-  $__default["default"].fn[NAME$d] = CardWidget._jQueryInterface;
-  $__default["default"].fn[NAME$d].Constructor = CardWidget;
+  $__default["default"].fn[NAME$c] = CardWidget._jQueryInterface;
+  $__default["default"].fn[NAME$c].Constructor = CardWidget;
 
-  $__default["default"].fn[NAME$d].noConflict = function () {
-    $__default["default"].fn[NAME$d] = JQUERY_NO_CONFLICT$d;
+  $__default["default"].fn[NAME$c].noConflict = function () {
+    $__default["default"].fn[NAME$c] = JQUERY_NO_CONFLICT$c;
     return CardWidget._jQueryInterface;
   };
 
@@ -417,16 +417,16 @@
    * ====================================================
    */
 
-  var NAME$c = 'ControlSidebar';
-  var DATA_KEY$c = 'lte.controlsidebar';
-  var EVENT_KEY$5 = "." + DATA_KEY$c;
-  var JQUERY_NO_CONFLICT$c = $__default["default"].fn[NAME$c];
-  var EVENT_COLLAPSED$3 = "collapsed" + EVENT_KEY$5;
-  var EVENT_COLLAPSED_DONE$1 = "collapsed-done" + EVENT_KEY$5;
-  var EVENT_EXPANDED$2 = "expanded" + EVENT_KEY$5;
+  var NAME$b = 'ControlSidebar';
+  var DATA_KEY$b = 'lte.controlsidebar';
+  var EVENT_KEY$4 = "." + DATA_KEY$b;
+  var JQUERY_NO_CONFLICT$b = $__default["default"].fn[NAME$b];
+  var EVENT_COLLAPSED$3 = "collapsed" + EVENT_KEY$4;
+  var EVENT_COLLAPSED_DONE$1 = "collapsed-done" + EVENT_KEY$4;
+  var EVENT_EXPANDED$2 = "expanded" + EVENT_KEY$4;
   var SELECTOR_CONTROL_SIDEBAR = '.control-sidebar';
   var SELECTOR_CONTROL_SIDEBAR_CONTENT$1 = '.control-sidebar-content';
-  var SELECTOR_DATA_TOGGLE$4 = '[data-widget="control-sidebar"]';
+  var SELECTOR_DATA_TOGGLE$3 = '[data-widget="control-sidebar"]';
   var SELECTOR_HEADER$1 = '.main-header';
   var SELECTOR_FOOTER$1 = '.main-footer';
   var CLASS_NAME_CONTROL_SIDEBAR_ANIMATE = 'control-sidebar-animate';
@@ -443,7 +443,7 @@
   var CLASS_NAME_FOOTER_MD_FIXED = 'layout-md-footer-fixed';
   var CLASS_NAME_FOOTER_LG_FIXED = 'layout-lg-footer-fixed';
   var CLASS_NAME_FOOTER_XL_FIXED = 'layout-xl-footer-fixed';
-  var Default$a = {
+  var Default$9 = {
     controlsidebarSlide: true,
     scrollbarTheme: 'os-theme-light',
     scrollbarAutoHide: 'l',
@@ -675,13 +675,13 @@
 
     ControlSidebar._jQueryInterface = function _jQueryInterface(operation) {
       return this.each(function () {
-        var data = $__default["default"](this).data(DATA_KEY$c);
+        var data = $__default["default"](this).data(DATA_KEY$b);
 
-        var _options = $__default["default"].extend({}, Default$a, $__default["default"](this).data());
+        var _options = $__default["default"].extend({}, Default$9, $__default["default"](this).data());
 
         if (!data) {
           data = new ControlSidebar(this, _options);
-          $__default["default"](this).data(DATA_KEY$c, data);
+          $__default["default"](this).data(DATA_KEY$b, data);
         }
 
         if (data[operation] === 'undefined') {
@@ -701,104 +701,25 @@
    */
 
 
-  $__default["default"](document).on('click', SELECTOR_DATA_TOGGLE$4, function (event) {
+  $__default["default"](document).on('click', SELECTOR_DATA_TOGGLE$3, function (event) {
     event.preventDefault();
 
     ControlSidebar._jQueryInterface.call($__default["default"](this), 'toggle');
   });
   $__default["default"](document).ready(function () {
-    ControlSidebar._jQueryInterface.call($__default["default"](SELECTOR_DATA_TOGGLE$4), '_init');
+    ControlSidebar._jQueryInterface.call($__default["default"](SELECTOR_DATA_TOGGLE$3), '_init');
   });
   /**
    * jQuery API
    * ====================================================
    */
 
-  $__default["default"].fn[NAME$c] = ControlSidebar._jQueryInterface;
-  $__default["default"].fn[NAME$c].Constructor = ControlSidebar;
-
-  $__default["default"].fn[NAME$c].noConflict = function () {
-    $__default["default"].fn[NAME$c] = JQUERY_NO_CONFLICT$c;
-    return ControlSidebar._jQueryInterface;
-  };
-
-  /**
-   * --------------------------------------------
-   * AdminLTE DirectChat.js
-   * License MIT
-   * --------------------------------------------
-   */
-  /**
-   * Constants
-   * ====================================================
-   */
-
-  var NAME$b = 'DirectChat';
-  var DATA_KEY$b = 'lte.directchat';
-  var EVENT_KEY$4 = "." + DATA_KEY$b;
-  var JQUERY_NO_CONFLICT$b = $__default["default"].fn[NAME$b];
-  var EVENT_TOGGLED = "toggled" + EVENT_KEY$4;
-  var SELECTOR_DATA_TOGGLE$3 = '[data-widget="chat-pane-toggle"]';
-  var SELECTOR_DIRECT_CHAT = '.direct-chat';
-  var CLASS_NAME_DIRECT_CHAT_OPEN = 'direct-chat-contacts-open';
-  /**
-   * Class Definition
-   * ====================================================
-   */
-
-  var DirectChat = /*#__PURE__*/function () {
-    function DirectChat(element) {
-      this._element = element;
-    }
-
-    var _proto = DirectChat.prototype;
-
-    _proto.toggle = function toggle() {
-      $__default["default"](this._element).parents(SELECTOR_DIRECT_CHAT).first().toggleClass(CLASS_NAME_DIRECT_CHAT_OPEN);
-      $__default["default"](this._element).trigger($__default["default"].Event(EVENT_TOGGLED));
-    } // Static
-    ;
-
-    DirectChat._jQueryInterface = function _jQueryInterface(config) {
-      return this.each(function () {
-        var data = $__default["default"](this).data(DATA_KEY$b);
-
-        if (!data) {
-          data = new DirectChat($__default["default"](this));
-          $__default["default"](this).data(DATA_KEY$b, data);
-        }
-
-        data[config]();
-      });
-    };
-
-    return DirectChat;
-  }();
-  /**
-   *
-   * Data Api implementation
-   * ====================================================
-   */
-
-
-  $__default["default"](document).on('click', SELECTOR_DATA_TOGGLE$3, function (event) {
-    if (event) {
-      event.preventDefault();
-    }
-
-    DirectChat._jQueryInterface.call($__default["default"](this), 'toggle');
-  });
-  /**
-   * jQuery API
-   * ====================================================
-   */
-
-  $__default["default"].fn[NAME$b] = DirectChat._jQueryInterface;
-  $__default["default"].fn[NAME$b].Constructor = DirectChat;
+  $__default["default"].fn[NAME$b] = ControlSidebar._jQueryInterface;
+  $__default["default"].fn[NAME$b].Constructor = ControlSidebar;
 
   $__default["default"].fn[NAME$b].noConflict = function () {
     $__default["default"].fn[NAME$b] = JQUERY_NO_CONFLICT$b;
-    return DirectChat._jQueryInterface;
+    return ControlSidebar._jQueryInterface;
   };
 
   /**
@@ -820,9 +741,7 @@
   var SELECTOR_DROPDOWN_MENU_ACTIVE = '.dropdown-menu.show';
   var SELECTOR_DROPDOWN_TOGGLE = '[data-toggle="dropdown"]';
   var CLASS_NAME_DROPDOWN_RIGHT = 'dropdown-menu-right';
-  var CLASS_NAME_DROPDOWN_SUBMENU = 'dropdown-submenu'; // TODO: this is unused; should be removed along with the extend?
-
-  var Default$9 = {};
+  var CLASS_NAME_DROPDOWN_SUBMENU = 'dropdown-submenu';
   /**
    * Class Definition
    * ====================================================
@@ -890,7 +809,7 @@
       return this.each(function () {
         var data = $__default["default"](this).data(DATA_KEY$a);
 
-        var _config = $__default["default"].extend({}, Default$9, $__default["default"](this).data());
+        var _config = $__default["default"].extend({}, $__default["default"](this).data());
 
         if (!data) {
           data = new Dropdown($__default["default"](this), _config);
@@ -3050,7 +2969,6 @@
   exports.CardRefresh = CardRefresh;
   exports.CardWidget = CardWidget;
   exports.ControlSidebar = ControlSidebar;
-  exports.DirectChat = DirectChat;
   exports.Dropdown = Dropdown;
   exports.ExpandableTable = ExpandableTable;
   exports.Fullscreen = Fullscreen;

@@ -1,7 +1,6 @@
 import CardRefresh from './CardRefresh'
 import CardWidget from './CardWidget'
 import ControlSidebar from './ControlSidebar'
-import DirectChat from './DirectChat'
 import Dropdown from './Dropdown'
 import ExpandableTable from './ExpandableTable'
 import Fullscreen from './Fullscreen'
@@ -18,7 +17,6 @@ export {
   CardRefresh,
   CardWidget,
   ControlSidebar,
-  DirectChat,
   Dropdown,
   ExpandableTable,
   Fullscreen,
